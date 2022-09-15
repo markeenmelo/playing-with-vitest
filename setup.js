@@ -5,10 +5,10 @@ import { rest } from 'msw'
 
 export const restHandlers = [
   rest.get('https://pokeapi.co/api/v2/pokemon/ditto', (_req, res, ctx) => {
-    return res(ctx.status(200), ctx.json({abilities: [{ability: {name: 'speed'}}]}))
+    return res(ctx.status(200), ctx.json({ abilities: [{ ability: { name: 'speed' } }] }))
   }),
   rest.get('https://pokeapi.co/api/v2/ability/speed', (_req, res, ctx) => {
-    return res(ctx.status(200), ctx.json({speed: 'fast'}))
+    return res(ctx.status(200), ctx.json({ speed: 'fast' }))
   }),
 ]
 
